@@ -29,7 +29,9 @@ try {
             const coordData = `${x1}_${y1}`
 
             setCoordData(coordData)
-        } else if (x1 === x2) {
+            return
+        }
+        if (x1 === x2) {
             const countData = y2 > y1 ? {from: y1, to: y2} : {from: y2, to: y1}
             
 
@@ -38,7 +40,9 @@ try {
 
                 setCoordData(coordData)
             }
-        } else if (y1 === y2) {
+            return
+        }
+        if (y1 === y2) {
             const countData = x2 > x1 ? {from: x1, to: x2} : {from: x2, to: x1}
 
             for (let k = countData.from; k <= countData.to; k++) {
@@ -46,11 +50,9 @@ try {
 
                 setCoordData(coordData)
             }
+            return
         }
     })
-    _ _ _
-    _ _ _
-    _ _ _
 
     const overlapCount = Object.keys(overlapByCoord).reduce((acc, coordData) => {
         const overlapData = overlapByCoord[coordData]
