@@ -55,7 +55,7 @@ try {
             wrongChar = char
         })
 
-        if (wrongChar === undefined) {
+        if (wrongChar === undefined && openedCharArr.length) {
           for (let i = openedCharArr.length - 1; i >= 0; i--) {
             let openChar = openedCharArr[i]
 
